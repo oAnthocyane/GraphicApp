@@ -9,20 +9,18 @@ import java.util.Properties;
  * The type Database config.
  */
 public class DatabaseConfig {
-    private static final String DATABASE_PATH = "/database_";
-    private static final String DATABASE_EXTENSHION = ".properties";
+    private static final String DATABASE_PATH = "/database.properties";
 
     private final Properties properties;
 
     /**
      * Instantiates a new Database config.
      *
-     * @param choice the choice
      */
-    public DatabaseConfig(String choice)  {
+    public DatabaseConfig()  {
         properties = new Properties();
         try {
-            InputStream input = getClass().getResourceAsStream(DATABASE_PATH + choice + DATABASE_EXTENSHION);
+            InputStream input = getClass().getResourceAsStream(DATABASE_PATH);
             properties.load(input);
         }catch (IOException ex){
             System.err.println("Не могу открыть файл для подключения к базе данных");

@@ -12,7 +12,7 @@ public class Database {
     /**
      * The Config.
      */
-    DatabaseConfig config = new DatabaseConfig("localhost");
+    DatabaseConfig config = new DatabaseConfig();
     /**
      * The Url.
      */
